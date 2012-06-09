@@ -3,7 +3,7 @@ $:.push File.expand_path("../lib", __FILE__)
 require 'version'
 
 Gem::Specification.new do |s|
-  s.name        = "zucchini-ios"
+  s.name        = "royratcliffe-zucchini-ios"
   s.version     = Zucchini::VERSION
   s.date        = Date.today.to_s
   s.platform    = Gem::Platform::RUBY
