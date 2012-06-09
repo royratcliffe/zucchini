@@ -1,8 +1,8 @@
 class Screen
   constructor: (@name) ->
     if @anchor then target.waitForElement @anchor()
-  
-  elements: {}                           
+
+  elements: {}
   actions :
     'Take a screenshot$' : ->
       target.captureScreenWithName(@name)

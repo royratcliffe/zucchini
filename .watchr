@@ -15,4 +15,4 @@ end
 
 watch("^lib/(.*).rb") do |match|
   run_spec %{spec/lib/#{match[1]}_spec.rb}
-end  
+end

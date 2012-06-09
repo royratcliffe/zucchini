@@ -3,13 +3,13 @@ Function::bind = (context) ->
   fun = this
   ->
     fun.apply context, arguments
-    
+
 String::camelCase = ->
   @replace /([\-\ ][A-Za-z])/g, ($1) ->
     $1.toUpperCase().replace /[\-\ ]/g, ""
 
 extend = (obj, mixin) ->
-  obj[name] = method for name, method of mixin        
+  obj[name] = method for name, method of mixin
   obj
 
 puts = (text) ->
@@ -46,7 +46,7 @@ target.captureScreenWithName_ = target.captureScreenWithName
 target.captureScreenWithName = (screenName) ->
   screensCountText = (if (++screensCount < 10) then "0" + screensCount else screensCount)
   @captureScreenWithName_ screensCountText + "_" + screenName
-                                                         
+
 class Zucchini
   @run: (featureText) ->
     sections = featureText.trim().split(/\n\s*\n/)

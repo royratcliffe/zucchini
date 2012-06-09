@@ -13,7 +13,7 @@
 	<header>
 		<h1><%= @device[:name] %><span class="time"><%= @time %></span></h1>
 	</header>
-	
+
 	<% @features.each_with_index do |f, i| %>
 	<section class="<%= i == 0 ? 'first' : '' %> feature">
 		<h3><%= f.name %></h3>
@@ -22,12 +22,12 @@
 			<% if !f.stats[:pending].empty? %><div class="pending"><%= f.stats[:pending].length.to_s %></div><% end %>
 			<% if !f.stats[:passed].empty?  %><div class="passed"><%=  f.stats[:passed].length.to_s  %></div><% end %>
 		</div>
-	
+
 		<div class="buttons">
 			<a class="expand left">Expand</a>
 			<a class="collapse right">Collapse</a>
 		</div>
-	
+
 		<div class="viewport">
 			<div class="surface">
 				<% f.screenshots.each do |s|  %>
@@ -37,8 +37,8 @@
 					<% %W(actual expected difference).each do |type| %>
 					<dd class="<%= s.result_images[type.to_sym] ? '' : 'hidden' %>"><p><%= type.capitalize %></p><img src="<%= s.result_images[type.to_sym] %>"/></dd>
 					<% end %>
-				</dl> 
-				<% end %>              
+				</dl>
+				<% end %>
 			</div>
 		</div>
 	</section>
